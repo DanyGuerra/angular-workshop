@@ -1,0 +1,11 @@
+{
+  "my_data": [
+    {
+      "name": "Luis Daniel Ramirez Guerra",
+      "edad": 25,
+      "is": "LDRG2",
+      "ciudad": "Salamanca",
+      "estado": "Guanajuato"
+    }
+  ]
+}

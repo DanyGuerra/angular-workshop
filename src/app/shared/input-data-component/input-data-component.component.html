@@ -1,0 +1,11 @@
+<mat-form-field>
+  <mat-label>{{ ph ? ph : "" }}</mat-label>
+  <input
+    matInput
+    [name]="ph ? ph : 'value'"
+    (keyUp)="captureValue($event)"
+    [type]="typeInput ? typeInput : 'text'"
+    [(ngModel)]="val"
+    required
+  />
+</mat-form-field>

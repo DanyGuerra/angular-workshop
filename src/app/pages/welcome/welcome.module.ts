@@ -3,22 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { WelcomeComponent } from './welcome.component';
 import { WelcomeRoutingModule } from './welcome.route';
-import { CdkTableModule } from '@angular/cdk/table';
-import { WelcomeService } from './welcome.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [WelcomeComponent],
-  imports: [WelcomeRoutingModule, CdkTableModule],
+  imports: [WelcomeRoutingModule, MatCardModule, MatTableModule],
   providers: [],
   bootstrap: [],
 })
-export class WelcomeModule implements OnInit {
-  // constructor(private service: WelcomeService) {}
-
-  ngOnInit() {
-    console.log('Hola');
-    // this.service.getData().subscribe((response) => {
-    //   console.log(response);
-    // });
-  }
-}
+export class WelcomeModule {}

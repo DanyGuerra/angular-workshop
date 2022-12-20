@@ -1,21 +1,59 @@
-<p>Softtek</p>
-<p>Angular training</p>
-<p>{{ message }}</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <div class="container">
+        <img
+          class="card-avatar"
+          mat-card-avatar
+          src="./assets/img/image2.jfif"
+        />
+        <!-- <img mat-card-sm-image src="./assets/img/image2.jfif" /> -->
 
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
+        <div class="title-header">
+          <mat-card-title>Softtek</mat-card-title>
+          <mat-card-subtitle>Angular Training</mat-card-subtitle>
+        </div>
+      </div>
+    </mat-card-title-group>
+  </mat-card-header>
+  <img mat-card-lg-image src="./assets/img/image2.jfif" />
+  <mat-card-content> {{ message }} </mat-card-content>
+</mat-card>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="edad">
+    <th mat-header-cell *matHeaderCellDef>Edad</th>
+    <td mat-cell *matCellDef="let element">{{ element.edad }}</td>
+  </ng-container>
+
+  <!-- IS Column -->
+  <ng-container matColumnDef="is">
+    <th mat-header-cell *matHeaderCellDef>IS</th>
+    <td mat-cell *matCellDef="let element">{{ element.is }}</td>
+  </ng-container>
+
+  <!-- City Column -->
+  <ng-container matColumnDef="ciudad">
+    <th mat-header-cell *matHeaderCellDef>Ciudad</th>
+    <td mat-cell *matCellDef="let element">{{ element.ciudad }}</td>
+  </ng-container>
+
+  <!-- State Column -->
+  <ng-container matColumnDef="estado">
+    <th mat-header-cell *matHeaderCellDef>Estado</th>
+    <td mat-cell *matCellDef="let element">{{ element.estado }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>

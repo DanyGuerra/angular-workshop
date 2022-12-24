@@ -1,7 +1,7 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="isAuthenticated()">
   <span routerLink="welcome">Inicio</span>
   <span routerLink="unicorns">Crud</span>
-  <span routerLink="login">Login</span>
+  <span (click)="logout()">Logout</span>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

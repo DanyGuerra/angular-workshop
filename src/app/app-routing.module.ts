@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {
@@ -8,6 +9,7 @@ const routes: Routes = [
       import('./entities/unicorns/unicors.module').then(
         (m) => m.UnicornsModule
       ),
+    canActivate: [AuthenticationGuard],
   },
   {
     path: '',
@@ -18,6 +20,7 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: () =>
       import('./pages/welcome/welcome.module').then((m) => m.WelcomeModule),
+    canActivate: [AuthenticationGuard],
   },
   {
     path: 'login',

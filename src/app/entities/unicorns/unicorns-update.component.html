@@ -1,0 +1,27 @@
+<div fixLayout="row" fxLayoutAlign="start center" mat-dialog-title>
+  <h2 class="title m-0" fxFlex="auto">
+    {{ unicorn?.name || "Crear unicornio" }}
+  </h2>
+  <button class="text-secondary" mat-dialog-close mat-icon-button type="button">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-divider class="mx-6 text-border"></mat-divider>
+
+<mat-dialog-content class="my-6" fxLayout="column">
+  <form class="example-container" #ngForm="ngForm"></form>
+</mat-dialog-content>
+
+<mat-divider class="mx-6 text-border"></mat-divider>
+<mat-align-actions align="end">
+  <button
+    type="button"
+    cdkFocusInitial
+    color="warn"
+    mat-button
+    mat-dialog-close
+  >
+    CERRAR
+  </button>
+</mat-align-actions>

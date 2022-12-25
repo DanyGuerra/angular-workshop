@@ -6,6 +6,7 @@ import { LoginRoutingModule } from './login.route';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -14,6 +15,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatFormFieldModule,
     FormsModule,
     MatSnackBarModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [],

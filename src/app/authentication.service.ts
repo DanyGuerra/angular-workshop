@@ -19,7 +19,8 @@ export class AuthenticationService {
     }
   }
 
-  logOut(): void {
+  logout(): void {
+    console.log('remove token');
     localStorage.removeItem('token');
   }
 

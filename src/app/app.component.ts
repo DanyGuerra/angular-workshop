@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
   logout(): void {
-    this.authService.logOut;
+    this.authService.logout();
     this.router.navigate(['/login']);
   }
 }
